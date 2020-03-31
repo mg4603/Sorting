@@ -4,11 +4,15 @@ Bubble Sort is a basic sorting algorithm with a space complexity of O(n) and aux
 <br>
 
 ### Basic rundown:
-
+The current element is compared with the immediate next element and swap if the current element is larger. This goes on till you reach the end of the array, meaning that the largest element is at the end of the array at the end of the first pass. You then do n-1 passes to sort the entire array.
 
 NOTE: In order for auxillary space to be O(1), no new array is created for holding the sorted elements.
 
 ### Algorithm:
-1. Find the smallest element in the array and swap it with the first element of the array. This divides the array into two distinct parts, the first element which is now ordered and the remaining elements that are yet unordered.
-2. Leaving the sorted elements untouched, pick the first element of the new unsorted array - the second element of the original array and swap with the smallest element in the new unsorted array. The first 2 elements of the original array are now sorted while the remainder of the array is still unsorted.
-3. Repeat the second step sequentially for the rest of unordered array till the second last element of original array. At this point the entire array is ordered as the first n-1 elements are in order from the smallest to largest, which implies that the last element must be the largest.
+1. Compare each element of the array with the next element and swap if the current element is larger. This ensures that at the end of the the first pass the largest element is at the end of the array.
+2. Repeat step one, while excluding the last i elements till you can make a pass, without any swaps.
+3. When you reach a point where you can make a pass without any swaps, every element in the array is smaller then the next element, which implies that the array is completely sorted.
+  
+NOTE: You only have to check upto the n-i-1 element in each pass as the remaining i<sup>th</sup> elements are already in order.
+    
+    
