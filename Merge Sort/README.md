@@ -9,4 +9,4 @@ The algorithm divides the array into two halves, recursively calls its for the t
 ### Algorithm
 1. Find mid-point of original array.
 2. Divide original array into two sub-arrays and recursively call the algorithm on the two sub-arrays, till each sub-array contains only one element.
-3. Merge the two sub arrays such that elements are sorted at each step of the recursive call
+3. Merge the two sub arrays such that elements are sorted, at each step of the recursive call
